@@ -42,7 +42,7 @@ header #menu ul li a:hover{
 }
 
 #logo{
-    position: absolute;
+    position: fixed;
     float: left;
     width: 150px;
     padding: 25px;
@@ -89,14 +89,8 @@ main .khung h2{
     clear: both;
 }
 
-
-main #khung-right{
-    width: 31%;
-    height: 300px;
-    border: 2px solid green;
-    float: right;
-    margin: 10px 1%;
-    border-radius: 10px;
-    border-left: 2px dotted;
+footer{
+    background-color: brown;
+    clear: both;
+    color: white;
 }
-
