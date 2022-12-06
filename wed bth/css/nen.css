@@ -1,32 +1,36 @@
-html{
-    box-sizing: border-box;
-}
-
 *{
-    box-sizing: border-box;
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
-header{
-    height: 14em;
+#layout{
+    display: grid;
+    grid-template-rows: 14em auto 100px;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 
+    "header header header"
+    "main main links"
+    "footer footer footer";
+}
+#header{
+    grid-area: header;
+}
+
+#header{
     background: url(../img/croissants_banner.jpg) no-repeat center;
     background-size: cover;    
+    
 }
 
-header #menu{
+#header ul{
     background-color: brown;
-
-}
-
-header #menu ul{
     display: flex;
     list-style: none;
     justify-content: center;
     padding: 11px;
 }
 
-header #menu ul li a{
+#header a{
     text-decoration: none;
     border: 1px solid orange;
     margin-left: 20px;
@@ -36,7 +40,7 @@ header #menu ul li a{
     color: orange;
 }
 
-header #menu ul li a:hover{
+#header a:hover{
     color: white;
     border: 1px solid white;
 }
@@ -44,53 +48,66 @@ header #menu ul li a:hover{
 #logo{
     position: fixed;
     float: left;
-    width: 150px;
+    width: 145px;
     padding: 25px;
 }
 
- #name #black{
+#name #black{
     padding-left: 39%;
     padding-top: 55px;
 }
 
- header #name p{
+#header p{
     color: white;
     margin-left: 400px;
     font-weight: bold;
 }
-
-main #khung_tong{
+#main{
+    grid-area: main;
+    margin: 2% 3%;
     border: 2px solid orange;
     border-radius: 10px ;
-    width: 65%;
-    margin: 10px 1%;
-    float: left;
 }
 
-main #khung_tong .tua-de{
+
+#main .tua-de{
     margin-left: 10px;
     padding-top: 10px;    
 }
 
-main .khung{
+#main .khung{
     padding: 10px;
 }
 
-main #khung_tong .de-khung1{
+#main .de-khung1{
     border-top: 2px solid rgb(168, 58, 58);
     border-left: 2px solid rgb(168, 58, 58);
 }
 
-main .khung img {
+#main .khung img {
     float: left;
 }
 
-main .khung h2{
+#main .khung h2{
     clear: both;
 }
 
-footer{
+
+#aside{
+    grid-area: links;
+    margin: 6% -2%;
+}
+
+#aside h2{
+    border: 1px solid orange;
+    border-radius: 10px;
+    background-color: orange;
+}
+
+#footer{
+    grid-area: footer;
     background-color: brown;
     clear: both;
     color: white;
 }
+
